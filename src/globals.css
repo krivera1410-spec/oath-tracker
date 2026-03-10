@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #080808;
+  color: #e0e0e0;
+  font-family: 'DM Mono', 'Courier New', monospace;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+
+.nav-btn { background: none; border: none; cursor: pointer; padding: 9px 18px; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #3a3a3a; transition: all .2s; border-bottom: 2px solid transparent; }
+.nav-btn.active { color: #ef4444; border-bottom-color: #ef4444; }
+.nav-btn:hover { color: #aaa; }
+
+.tab-btn { background: none; border: none; cursor: pointer; padding: 6px 14px; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #333; border-radius: 2px; transition: all .15s; }
+.tab-btn.active { background: #161616; color: #ccc; }
+
+.card { background: #0f0f0f; border: 1px solid #1c1c1c; border-radius: 3px; }
+.btn { border: none; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; transition: all .2s; border-radius: 2px; font-size: 12px; }
+.btn-red { background: #ef4444; color: #fff; padding: 9px 20px; }
+.btn-red:hover { background: #dc2626; }
+.btn-red:disabled { background: #444; cursor: not-allowed; }
+.btn-purple { background: #7c3aed; color: #fff; padding: 9px 20px; }
+.btn-purple:hover { background: #6d28d9; }
+.btn-ghost { background: transparent; border: 1px solid #222; color: #555; padding: 7px 14px; }
+.btn-ghost:hover { border-color: #444; color: #ccc; }
+.btn-sm { padding: 4px 12px !important; font-size: 10px !important; }
+.btn-xs { padding: 3px 9px !important; font-size: 9px !important; }
+
+.sel { background: #0f0f0f; border: 1px solid #1e1e1e; color: #888; padding: 7px 10px; font-family: 'DM Mono', monospace; font-size: 11px; border-radius: 2px; outline: none; cursor: pointer; }
+.sel:focus { border-color: #ef4444; }
+
+.inp { background: #0f0f0f; border: 1px solid #1e1e1e; color: #ccc; padding: 8px 10px; font-family: 'DM Mono', monospace; font-size: 11px; border-radius: 2px; outline: none; width: 100%; }
+.inp:focus { border-color: #ef4444; }
+
+.badge { display: inline-block; padding: 2px 7px; border-radius: 2px; font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid; }
+.vtype-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 2px; font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; border: 1px solid #222; background: #111; }
+
+.row { border-bottom: 1px solid #111; cursor: pointer; transition: background .12s; }
+.row:hover { background: #0d0d0d; }
+
+.prog-bg { height: 3px; background: #171717; border-radius: 2px; overflow: hidden; }
+.prog-fill { height: 100%; border-radius: 2px; transition: width .5s; }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.9); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal { background: #0f0f0f; border: 1px solid #202020; border-radius: 4px; padding: 28px; width: 580px; max-height: 88vh; overflow-y: auto; }
+
+.crane-banner { background: #0c0a14; border: 1px solid #2d1d5e; border-radius: 3px; border-left: 3px solid #7c3aed; padding: 14px 18px; }
+.drop-zone { border: 1px dashed #222; border-radius: 4px; padding: 32px; text-align: center; cursor: pointer; transition: all .2s; }
+.drop-zone:hover { border-color: #7c3aed; background: #0c0a12; }
+
+.tip-card { background: #0d0d0d; border: 1px solid #1c1c1c; border-radius: 3px; padding: 18px; border-left: 3px solid #ef4444; }
+.tip-card.MEDIUM { border-left-color: #f97316; }
+.tip-card.LOW { border-left-color: #3b82f6; }
+
+table { width: 100%; border-collapse: collapse; }
+th { font-size: 9px; color: #2e2e2e; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; padding: 9px 12px; text-align: left; white-space: nowrap; background: #0a0a0a; }
+td { font-size: 11px; color: #777; padding: 10px 12px; border-bottom: 1px solid #0f0f0f; vertical-align: middle; }
+tr:hover td { background: #0b0b0b; }
+
+.sort-hd { cursor: pointer; display: flex; align-items: center; gap: 3px; user-select: none; }
+.sort-hd:hover { color: #888; }
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.6} }
+.confirm-needed { animation: pulse 2s infinite; }
