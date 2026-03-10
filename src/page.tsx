@@ -1,6 +1,6 @@
-import { SignIn } from '@clerk/nextjs'
+import { SignUp } from '@clerk/nextjs'
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <div style={{
       minHeight: '100vh', background: '#080808',
@@ -12,7 +12,7 @@ export default function SignInPage() {
         </div>
         <div style={{ fontSize: 10, color: '#333', letterSpacing: 2.5, marginTop: 6 }}>NYC FLEET COMPLIANCE · BUILDING SUPPLY</div>
       </div>
-      <SignIn appearance={{
+      <SignUp appearance={{
         variables: { colorPrimary: '#ef4444', colorBackground: '#0f0f0f', colorText: '#e0e0e0', colorInputBackground: '#111', colorInputText: '#ccc' },
         elements: { card: { border: '1px solid #1e1e1e', boxShadow: 'none' }, formButtonPrimary: { fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: '2px', textTransform: 'uppercase' } }
       }} />
